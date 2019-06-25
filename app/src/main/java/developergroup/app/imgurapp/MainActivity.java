@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         commentslist = findViewById(R.id.commentslist);
         commentslist.setLayoutManager(new LinearLayoutManager(this));
-        if (getIntent()!=null){
+        if (getIntent().getStringExtra("imgid")!=null){
             imageid=getIntent().getStringExtra("imgid");
         }
         apiService.getImageData(getString(R.string.clientid), imageid)
